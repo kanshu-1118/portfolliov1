@@ -1,0 +1,18 @@
+.mainSec2{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    gap: 24px;
+    &__title{
+        font-size: 46px;
+    }
+    &__contWrap{
+        border: 1px solid #000;
+        width: 1000px;
+        height: 500px;
+    }
+}
