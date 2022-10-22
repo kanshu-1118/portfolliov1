@@ -19,7 +19,7 @@
             font-size: 16px;
             width: 160px;
             height: a.$navHeight;
-            border: 1px solid #000;
+            border: 2px solid #000;
             text-align: center;
             line-height: a.$navHeight;
             &:hover{
@@ -30,17 +30,25 @@
             button{
                 display: block;
                 width: 100%;
+                height: 100%;
+                transition: 0.5s ease;
                 &:hover{
                     color: #fefefe;
                 }
             }
         }
+        .other{
+            border: 2px solid rgb(74, 26, 164);
+            &:hover{
+                background-color: rgb(74, 26, 164);
+            }
+            button{
+                color: rgb(74, 26, 164);
+            }
+        }
         .set{
             background-color: #000;
             color: #fefefe;
-            button{
-                color: #fefefe;
-            }
         }
     }
     .contWrap{

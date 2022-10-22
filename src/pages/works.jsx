@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import Head from "../components/head/head"
 import Roading from "../components/roading/roading"
 import wStyle from "../sass/works.module.scss"
+import ArrayList from "../workFile/array"
+// import Arrays from "../workFile/array"
 
 
 const works = () => {
@@ -11,7 +13,7 @@ const works = () => {
         setCateBtn(!cateBtn);
         setCurrentCatagory("All")
     }
-
+    console.log(ArrayList._currentValue);
     const [currentCategory, setCurrentCatagory] = useState("All")
     if (currentCategory === "All") {
         console.log("render all component");
@@ -26,6 +28,7 @@ const works = () => {
             setData(d)
         );
     },[]);
+    
     return (
         <div>
             <Head />
@@ -37,7 +40,7 @@ const works = () => {
                         <li><button onClick={() => setCurrentCatagory("All")} className={currentCategory === "All" ? wStyle.set : ""}>{cateBtn ? "All" : "Graphic" }</button></li>
                         <li><button onClick={() => setCurrentCatagory("Design")} className={currentCategory === "Design" ? wStyle.set : ""}>{cateBtn ? "Design" : "Logo" }</button></li>
                         <li><button onClick={() => setCurrentCatagory("Engineering")} className={currentCategory === "Engineering" ? wStyle.set : ""}>{cateBtn ? "Engineering" : "Document" }</button></li>
-                        <li className="other"><button onClick={btnToggle}>{cateBtn ? "Other" : "Web" }</button></li>
+                        <li className={wStyle.other}><button onClick={btnToggle}>{cateBtn ? "Other" : "Web" }</button></li>
                     </ul>
                 </nav>
                 <div className={wStyle.contWrap}>
