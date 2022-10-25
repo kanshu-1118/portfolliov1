@@ -1,32 +1,36 @@
-import { useEffect, useRef, useState } from "react"
+import { Children, useEffect, useRef, useState } from "react"
 import Head from "../components/head/head"
+import WorksCont from "../components/worksCont/worksCont"
 import Roading from "../components/roading/roading"
 import wStyle from "../sass/works.module.scss"
-import ArrayList from "../workFile/array"
+import { ArrayContext,langContext } from '../workFile/array'
 // import Arrays from "../workFile/array"
 
 
 const works = () => {
+    // カテゴリの処理
     const [data, setData] = useState([])
     const [cateBtn, setCateBtn] = useState(true)
     const btnToggle = () => {
         setCateBtn(!cateBtn);
         setCurrentCatagory("All")
     }
-    console.log(ArrayList._currentValue);
     const [currentCategory, setCurrentCatagory] = useState("All")
     if (currentCategory === "All") {
         console.log("render all component");
     } else if (currentCategory === "Design") {
         console.log("render design component");
+    } else if (currentCategory === "Engineer") {
+        console.log("render engineer component");
     }
-
+    // 配列を取得
+    // console.log(ArrayContext._currentValue.map((e,i) => e.lang));
+    // // console.log(ArrayContext._currentValue.lang);
+    // // console.log(langContext._currentValue);
+    
+    
     useEffect(()=> {
-        fetch('https://picsum.photos/v2/list?limit=10')
-        .then(response => response.json())
-        .then(d => 
-            setData(d)
-        );
+        console.log("renderAfter");
     },[]);
     
     return (
@@ -43,10 +47,7 @@ const works = () => {
                         <li className={wStyle.other}><button onClick={btnToggle}>{cateBtn ? "Other" : "Web" }</button></li>
                     </ul>
                 </nav>
-                <div className={wStyle.contWrap}>
-                    <ul>{data.map((img,i) => <li key={i}><img src={img.download_url} alt="" className={wStyle.liImg}/></li>)}
-                    </ul>
-                </div>
+                <WorksCont />
             </div>
         </div>
     )

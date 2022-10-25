@@ -52,27 +52,79 @@
         }
     }
     .contWrap{
-        width: 1000px;
+        min-width: calc(100% - 240px);
         // border: 1px solid #000;
         ul{
             margin-top: 64px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(5,320px);
+            grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+            grid-template-rows: repeat(5,368px);
             gap: 24px;
             li{
+                border: 1px solid #000;
                 overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
                 &:nth-child(n+3){
                     margin-top: 16px;
                 }
                 .liImg{
-                    width: 100%;
-                    height: 100%;
+                    width: calc(50% - a.$maxMargin);
+                    height: calc(100% - a.$maxMargin * 2);
                     transition: .1s ease;
                     overflow: hidden;
                     object-fit: cover;
-                    &:hover{
-                        transform: scale(1.1);
+                    background: #000;
+                    // &:hover{
+                    //     transform: scale(1.1);
+                    // }
+                }
+                .contAb{
+                    // border: 1px solid #000;
+                    width: calc(50% - a.$maxMargin);
+                    height: calc(100% - a.$maxMargin * 2);
+                    display: flex;
+                    flex-flow: column;
+                    .AbSubTitle{
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                    }
+                    h3{
+                        font-size: 20px;
+                        font-weight: 800;
+                    }
+                    .contCateWrap{
+                        margin: 16px 0;
+                        display: flex;
+                        flex-flow: column;
+                        gap: 8px;
+                        p{
+                            font-size: 14px;
+                            font-size: 400;
+                            border: 1px solid #000;
+                            padding: 4px 16px;
+                        }
+                        div{
+                            display: flex;
+                            gap: 8px;
+                        }
+                    }
+                    .aboutText{
+                        font-size: 12px;
+                    }
+                    .linkBtn{
+                        border: 1px solid #000;
+                        margin-top: auto;
+                        a{
+                            display: block;
+                            height: 100%;
+                            font-size: 14px;
+                            padding: 8px 32px;
+                            text-align: center;
+                            color: #000;
+                        }
                     }
                 }
             }
