@@ -3,7 +3,6 @@ import Head from "../components/head/head"
 import WorksCont from "../components/worksCont/worksCont"
 import Roading from "../components/roading/roading"
 import wStyle from "../sass/works.module.scss"
-import { ArrayContext,langContext } from '../workFile/array'
 // import Arrays from "../workFile/array"
 
 
