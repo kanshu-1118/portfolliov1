@@ -1,0 +1,28 @@
+.slider-enter.left {
+    transform: translateX(100%);
+}
+
+.slider-enter.right {
+transform: translateX(-100%);
+}
+
+.slider-enter.bottom {
+transform: translateY(100%);
+}
+
+.slider-exit.left {
+margin-top: -550px;
+}
+
+.slider-exit.right {
+margin-top: -550px;
+}
+
+.slider-exit.bottom {
+margin-top: -550px;
+}
+
+.slider-enter.slider-enter-active {
+transform: translate3d(0, 0, 0);
+transition: all 1s;
+}

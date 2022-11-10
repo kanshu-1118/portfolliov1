@@ -8,6 +8,7 @@ const worksCont = () => {
     // console.log(ArrayContext._currentValue.lang);
     // console.log(langContext._currentValue);
 
+    const test =[{index:"engineer",heading:"使用言語"},{index:"design",heading:"担当"}];
         
     
     return (
@@ -26,7 +27,13 @@ const worksCont = () => {
                                 <p>{ab.form}</p>
                             </div>
                             <div className={wStyle.contCateLang}>
-                                {(() => {
+                                {ab.position.map((data,index) => (
+                                    <div key={test[data].index}>
+                                        <h5>{test[data].heading}</h5>
+                                        <p>{data === 0  ? (ab.lang.map((d) => d )) : (ab.tule.map((d) => d))}</p>
+                                    </div>
+                                ))}
+                                {/* {(() => {
                                     if (ab.position.length == 2) {
                                         return(
                                             <div><h5>使用言語</h5><p>{ab.lang.map((d,index) => d )}</p></div>
@@ -40,7 +47,7 @@ const worksCont = () => {
                                             <div><h5>使用言語</h5><p>{ab.lang.map((d,index) => d )}</p></div>
                                         )
                                     }
-                                })()}
+                                })()} */}
                             </div>
                         </div>
                         <p className={wStyle.aboutText}>{ab.about}</p>

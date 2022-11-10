@@ -15,6 +15,7 @@ const works = () => {
         setCurrentCatagory("All")
     }
     const [currentCategory, setCurrentCatagory] = useState("All")
+    
     if (currentCategory === "All") {
         console.log("render all component");
     } else if (currentCategory === "Design") {

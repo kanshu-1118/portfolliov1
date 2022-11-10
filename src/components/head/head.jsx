@@ -1,5 +1,7 @@
 import style from "./head.module.scss";
 
+
+
 const head = (props) => {
   return (
     <header>

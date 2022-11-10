@@ -3,9 +3,9 @@ import React from 'react'
 const form = [
     '個人制作','チーム制作'
 ];
-const position = [
-    'design','engineer'
-];
+// const position = [
+//     'design','engineer'
+// ];
 const ArrayList1 = [
     { 
         name : "cosmocafe",
@@ -20,7 +20,8 @@ const ArrayList1 = [
         img : "../image/cosmocafeLogo.png",
         hard : ['UIデザイン','コンセプト'],
         season :"1年生前期",
-        position : position,
+        // position : position,
+        position : [0,1],
     },
     { 
         name : "freeme",
@@ -35,7 +36,8 @@ const ArrayList1 = [
         img : "",
         hard : ['html','css'],
         season :"1年生前期",
-        position : position[1],
+        // position : position[1],
+        position : [0],
     },
     { 
         name : "NONST",
@@ -50,7 +52,8 @@ const ArrayList1 = [
         img : "",
         hard : ['html','css'],
         season :"1年生前期",
-        position : position[1],
+        // position : position[1],
+        position : [0],
     },
     { 
         name : "GolePort",
@@ -65,7 +68,8 @@ const ArrayList1 = [
         img : "",
         hard : ['UIデザイン','コンセプト'],
         season :"1年生後期",
-        position : position,
+        // position : position,
+        position : [0,1],
     },
     { 
         name : "うみとこころとぼく",
@@ -80,7 +84,8 @@ const ArrayList1 = [
         img : "",
         hard : ['html','css'],
         season :"1年生後期",
-        position : position[1],
+        // position : position[1],
+        position : [0],
     },
     { 
         name : "fagory",
@@ -95,7 +100,8 @@ const ArrayList1 = [
         img : "",
         hard : ['UIデザイン','コンセプト'],
         season :"2年生前期",
-        position : position,
+        // position : position,
+        position : [0,1],
     },
     { 
         name : "まつりる",
@@ -109,7 +115,8 @@ const ArrayList1 = [
         img : "",
         season :"2年生前期",
         hard : [],
-        position : position[0],
+        // position : position[0],
+        position : [1],
     },
     { 
         name : "おさけたて",
@@ -123,12 +130,22 @@ const ArrayList1 = [
         img : "",
         season :"2年生前期",
         hard : [],
-        position : position[0],
+        // position : position[0],
+        position : [1],
     },
 ];
 
+const SkillArrayList = [
+    {
+        'age':'19歳',
+        'from':'出身',
+        'like':['服','甘いもの'],
+        'lang':['html5','pug','css','scss','Javascript','React','Next'],
+        'turl':['VisualStudioCode','Figma','Illustrator','PremierPro','AfterEffects','Indesign','XD']
+    }
+]
 
 // const ArrayContext = React.createContext(ArrayList1);
 // const langContext = React.createContext(lang);
 
-export {ArrayList1};
+export {ArrayList1,SkillArrayList};
